@@ -8,10 +8,12 @@ def register():
         name = request.form['name']
         email = request.form['email']
         event = request.form['event']
+        phone = request.form['phone']
 
         return f"""
         <h2>Thank you {name} for registering for {event}!</h2>
         <p>Confirmation sent to {email}</p>
+        <p>Phone: {phone}</p>
         """
 
     return render_template('index.html')
